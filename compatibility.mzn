@@ -1,5 +1,10 @@
 % Use this editor as a MiniZinc scratch book
 
 % compatibility
-function var bool: compatibility(var int:y,var int:x,var int:z) =
-y !=0 \/ x!=0 -> true; 
+
+predicate compatibility( var int: x) =
+    if x != 0  then 
+       true
+    else 
+       false
+    endif;
