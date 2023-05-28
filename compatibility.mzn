@@ -1,10 +1,6 @@
 % Use this editor as a MiniZinc scratch book
-
 % compatibility
-
-predicate compatibility( var int: x) =
-    if x != 0  then 
-       true
-    else 
-       false
-    endif;
+var int:n=10;
+predicate compatibility( array[int] of var int: x) =
+forall(i in 1..n where x[i] != 0) (  true );
+    
