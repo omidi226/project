@@ -12,7 +12,3 @@ x!=0 /\ y!=0-> compatibility( x);
 predicate test_consistency(var int:y,var int:x,var int:z) =
 (y !=0 -> z= x div y)->consistency(z);
 
-
-predicate test_composition(var int:y,var int:x,var int:z, var int:u) =
-((y !=0 -> z= x div y) /\
-true -> x>u )->composition(x,z); 
